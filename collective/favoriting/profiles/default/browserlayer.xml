@@ -1,0 +1,4 @@
+<layers>
+    <layer name="collective.favoriting"
+           interface="collective.favoriting.layer.Layer" />
+</layers>
