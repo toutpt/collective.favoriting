@@ -25,6 +25,14 @@
       interface=".layer.Layer"
       name="collective.favoriting"
       />
+  <browser:page
+      for="Products.Archetypes.interfaces.base.IBaseObject"
+      name="collective.favoriting"
+      class=".storage.FavoritingManager"
+      layer=".interfaces.ILayer"
+      permission="zope2.View"
+      />
+  <adapter factory=".storage.ArchetypesFavoritingStorageFactory"/>
 
   <!-- EXAMPLE:
   <browser:viewlet

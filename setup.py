@@ -27,7 +27,7 @@ setup(
     keywords='plone',
     author='JeanMichel aka toutpt',
     author_email='toutpt@gmail.com',
-    url='https://github.com/collective/',
+    url='https://github.com/toutpt/collective.favoriting',
     license='gpl',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['collective'],
