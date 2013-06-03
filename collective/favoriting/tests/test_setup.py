@@ -7,7 +7,7 @@ class TestSetup(base.IntegrationTestCase):
     stuff in profile are well activated (browserlayer, js, content types, ...)
     """
 
-    def test_xxx(self):
+    def test_default_profile(self):
         self.assertTrue(False)
 
 

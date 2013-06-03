@@ -38,7 +38,7 @@ setup(
         # -*- Extra requirements: -*-
     ],
     extras_require=dict(
-        test=['plone.app.testing', 'pyquery'],
+        test=['plone.app.testing', 'plone.app.robotframework'],
     ),
     entry_points="""
     # -*- Entry points: -*-
