@@ -1,10 +1,6 @@
 [report]
 omit =
     buildout-cache/eggs/*
-    parts/*
-    eggs/*
+    parts/*
+    eggs/*
     */test*
-exclude_lines =
-    if self.debug:
-    raise NotImplementedError
-
