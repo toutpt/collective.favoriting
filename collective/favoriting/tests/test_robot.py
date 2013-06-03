@@ -1,14 +1,15 @@
 import unittest
 
 import robotsuite
-from collective.history.testing import ROBOT
 from plone.testing import layered
+
+from collective.favoriting.testing import ROBOT
 
 
 def test_suite():
     suite = unittest.TestSuite()
     suite.addTests([
-        layered(robotsuite.RobotTestSuite('test_functional.robot'),
+        layered(robotsuite.RobotTestSuite('test_robot.robot'),
                 layer=ROBOT),
     ])
     return suite

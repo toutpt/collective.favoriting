@@ -10,7 +10,7 @@
 
 <h1>My favorites</h1>
 
-<table>
+<table id="favorites">
   <tr>
     <th>Content</th>
     <th>Delete</th>

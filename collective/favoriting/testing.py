@@ -15,15 +15,11 @@ class Layer(PloneSandboxLayer):
         # Load ZCML
         self.loadZCML(package=collective.favoriting)
 
+    def setUpPloneSite(self, portal):
+        self.applyProfile(portal, 'collective.favoriting:default')
 
-FIXTURE = PloneWithPackageLayer(
-    zcml_filename="configure.zcml",
-    zcml_package=collective.favoriting,
-    additional_z2_products=[],
-    gs_profile_id='collective.favoriting:default',
-    name="collective.favoriting:FIXTURE"
-)
 
+FIXTURE = Layer()
 INTEGRATION = IntegrationTesting(
     bases=(FIXTURE,), name="collective.favoriting:Integration"
 )
