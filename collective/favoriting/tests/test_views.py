@@ -1,4 +1,3 @@
-import unittest2 as unittest
 from zope import interface
 from Products.statusmessages.interfaces import IStatusMessage
 from collective.favoriting.tests import base

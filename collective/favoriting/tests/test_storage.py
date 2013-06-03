@@ -1,4 +1,3 @@
-import unittest2 as unittest
 from collective.favoriting.tests import base
 
 
