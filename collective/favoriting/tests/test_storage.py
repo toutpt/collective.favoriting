@@ -1,7 +1,5 @@
 import unittest2 as unittest
-from plone.app.testing import setRoles, TEST_USER_ID
 from collective.favoriting.tests import base
-ACTION_IDS = ("favoriting_rm", "favoriting_add")
 
 
 class TestStorage(base.IntegrationTestCase):
@@ -9,17 +7,7 @@ class TestStorage(base.IntegrationTestCase):
     def setUp(self):
         from collective.favoriting import storage
         super(TestStorage, self).setUp()
-        self.portal = self.layer['portal']
-        self.request = self.layer['request']
-        self.setRole("Manager")
-        self.portal.invokeFactory('Document', 'test-document')
-        self.setRole("Member")
-        self.document = self.portal['test-document']
         self.storage = storage.FavoritingManager(self.document, self.request)
-
-
-    def setRole(self, role="Member"):
-        setRoles(self.portal, TEST_USER_ID, [role])
 
     def test_call(self):
         self.assertEqual(self.storage(), self.storage)
