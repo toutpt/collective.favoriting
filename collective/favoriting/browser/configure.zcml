@@ -1,0 +1,39 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.favoriting">
+
+  <browser:page
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      name="favoriting_view"
+      template="favoriting_view.pt"
+      layer="collective.favoriting.layer.Layer"
+      permission="zope2.View"
+      />
+  <browser:page
+      for="Products.CMFCore.interfaces._content.IContentish"
+      name="favoriting_add"
+      class=".favoriting_view.Add"
+      layer="collective.favoriting.layer.Layer"
+      permission="collective.favoriting.add"
+      />
+  <browser:page
+      for="Products.CMFCore.interfaces._content.IContentish"
+      name="favoriting_isin"
+      class=".favoriting_view.Isin"
+      layer="collective.favoriting.layer.Layer"
+      permission="collective.favoriting.add"
+      />
+  <browser:page
+      for="Products.CMFCore.interfaces._content.IContentish"
+      name="favoriting_rm"
+      class=".favoriting_view.Rm"
+      layer="collective.favoriting.layer.Layer"
+      permission="collective.favoriting.add"
+      />
+</configure>

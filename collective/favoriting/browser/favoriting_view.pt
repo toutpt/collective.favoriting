@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="collective.favoriting">
+<body>
+<div metal:fill-slot="main" tal:define="favoriting context/@@collective.favoriting">
+
+<h1>My favorites</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Delete</th>
+  </tr>
+  <tal:fav tal:repeat="fav favoriting/get">
+    <tr>
+      <td><a tal:attributes="href fav/getURL" tal:content="fav/Title"></a></td>
+      <td><a tal:attributes="href string:${fav/getURL}/favoriting_rm" i18n:translate="">delete</a></td>
+    </tr>
+  </tal:fav>
+</table>
+
+</div>
+</body>
+</html>
