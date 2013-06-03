@@ -5,4 +5,4 @@ security = ModuleSecurityInfo('Products.CMFCore.permissions')
 
 security.declarePublic('AddToFavorites')
 AddToFavorites = 'collective.favoriting: Add'
-setDefaultRoles(AddToFavorites, ( 'Member', 'Manager'))
+setDefaultRoles(AddToFavorites, ('Member', 'Manager'))

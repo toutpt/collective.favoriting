@@ -7,6 +7,7 @@ from plone.testing import z2
 
 import collective.favoriting
 
+
 class Layer(PloneSandboxLayer):
 
     defaultBases = (PLONE_FIXTURE,)

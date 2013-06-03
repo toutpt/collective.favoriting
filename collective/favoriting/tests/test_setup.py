@@ -18,41 +18,39 @@ class TestSetup(base.IntegrationTestCase):
         action_info = actions[0].getInfoData()[0]
         self.assertEqual(action_info['category'], 'document_actions')
         self.assertEqual(
-             action_info['available'].text,
-             'not:object/@@collective.favoriting/isin'
-         )
+            action_info['available'].text,
+            'not:object/@@collective.favoriting/isin'
+        )
         self.assertEqual(action_info['description'], u"")
         self.assertEqual(action_info['title'], u'Add to favorite')
         self.assertEqual(
-             action_info['url'].text,
-             u'string:$object_url/favoriting_add'
-         )
+            action_info['url'].text,
+            u'string:$object_url/favoriting_add'
+        )
         self.assertEqual(
-             action_info['permissions'], ('collective.favoriting: Add',),
-         )
+            action_info['permissions'], ('collective.favoriting: Add',),
+        )
         self.assertIsNone(action_info['link_target'])
-        self.assertEqual(action_info['id'], 'favoriting_add'
-         )
+        self.assertEqual(action_info['id'], 'favoriting_add')
         self.assertEqual(action_info['icon'], '')
 
         action_info = actions[1].getInfoData()[0]
         self.assertEqual(action_info['category'], 'document_actions')
         self.assertEqual(
-             action_info['available'].text,
-             'object/@@collective.favoriting/isin'
-         )
+            action_info['available'].text,
+            'object/@@collective.favoriting/isin'
+        )
         self.assertEqual(action_info['description'], u"")
         self.assertEqual(action_info['title'], u'Remove from favorite')
         self.assertEqual(
-             action_info['url'].text,
-             u'string:$object_url/favoriting_rm'
-         )
+            action_info['url'].text,
+            u'string:$object_url/favoriting_rm'
+        )
         self.assertEqual(
-             action_info['permissions'], ('collective.favoriting: Add',),
-         )
+            action_info['permissions'], ('collective.favoriting: Add',),
+        )
         self.assertIsNone(action_info['link_target'])
-        self.assertEqual(action_info['id'], 'favoriting_rm'
-         )
+        self.assertEqual(action_info['id'], 'favoriting_rm')
         self.assertEqual(action_info['icon'], '')
 
     def test_browserlayer(self):

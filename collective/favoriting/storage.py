@@ -4,10 +4,8 @@ from zope import schema
 from zope.annotation import factory
 from Products.Five.browser import BrowserView
 from Products.CMFCore.utils import getToolByName
-from Products.Archetypes.interfaces.base import IBaseObject
 from zope.publisher.interfaces import IRequest
 from Products.CMFCore.interfaces._content import IContentish
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.indexer import indexer
 from zope.annotation.interfaces import IAttributeAnnotatable
 
