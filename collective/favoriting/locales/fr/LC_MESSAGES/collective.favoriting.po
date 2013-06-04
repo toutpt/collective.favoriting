@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.favoriting\n"
-"POT-Creation-Date: 2013-06-04 15:13+0000\n"
+"POT-Creation-Date: 2013-06-04 15:22+0000\n"
 "PO-Revision-Date: 2010-11-13 11:07+0100\n"
 "Last-Translator: YOURNAME <name@email.com>\n"
 "Language-Team: French <plone-fr@lists.plone.org>\n"
@@ -24,6 +24,19 @@ msgstr "Ajouter aux favoris"
 #: ./browser/favoriting_view.py:16
 msgid "Added to favorite"
 msgstr "Ajouté au favoris"
+
+#: ./browser/favoriting_view.pt:15
+msgid "Content"
+msgstr "Contenu"
+
+#: ./browser/favoriting_view.pt:16
+msgid "Delete"
+msgstr "Supprimer"
+
+#: ./browser/favoriting_view.pt:11
+#: ./profiles/default/actions.xml
+msgid "My favorites"
+msgstr "Mes favoris"
 
 #: ./profiles/default/actions.xml
 msgid "Remove from favorite"

@@ -8,12 +8,12 @@
 <body>
 <div metal:fill-slot="main" tal:define="favoriting context/@@collective.favoriting">
 
-<h1>My favorites</h1>
+<h1 i18n:translate="">My favorites</h1>
 
 <table id="favorites">
   <tr>
-    <th>Content</th>
-    <th>Delete</th>
+    <th i18n:translate="">Content</th>
+    <th i18n:translate="">Delete</th>
   </tr>
   <tal:fav tal:repeat="fav favoriting/get">
     <tr>

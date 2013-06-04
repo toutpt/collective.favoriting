@@ -26,7 +26,7 @@
   </object>
  </object>
   <object name="user" meta_type="CMF Action Category">
-  <object name="favoriting_view" meta_type="CMF Action" i18n:domain="plone">
+  <object name="favoriting_view" meta_type="CMF Action" i18n:domain="collective.favoriting">
    <property name="title" i18n:translate="">My favorites</property>
    <property name="description" i18n:translate=""></property>
    <property
