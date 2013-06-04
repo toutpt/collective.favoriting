@@ -1,6 +1,6 @@
 import unittest2 as unittest
 from collective.favoriting.tests import base
-ACTION_IDS = ("favoriting_rm", "favoriting_add")
+ACTION_IDS = ("favoriting_rm", "favoriting_add", "favoriting_view")
 
 
 class TestSetup(base.IntegrationTestCase):
@@ -51,6 +51,31 @@ class TestSetup(base.IntegrationTestCase):
         )
         self.assertIsNone(action_info['link_target'])
         self.assertEqual(action_info['id'], 'favoriting_rm')
+        self.assertEqual(action_info['icon'], '')
+
+        user_actions = self.layer['portal'].portal_actions.user
+        actions = [
+            action for action in user_actions.listActions()
+            if action.visible and action.id in ACTION_IDS
+        ]
+        self.assertEqual(len(actions), 1)
+        action_info = actions[0].getInfoData()[0]
+        self.assertEqual(action_info['category'], 'user')
+        self.assertEqual(
+            action_info['available'].text,
+            "python:member is not None"
+        )
+        self.assertEqual(action_info['description'], u"")
+        self.assertEqual(action_info['title'], u'My favorites')
+        self.assertEqual(
+            action_info['url'].text,
+            u'string:${globals_view/navigationRootUrl}/@@favoriting_view'
+        )
+        self.assertEqual(
+            action_info['permissions'], ('collective.favoriting: Add',),
+        )
+        self.assertIsNone(action_info['link_target'])
+        self.assertEqual(action_info['id'], 'favoriting_view')
         self.assertEqual(action_info['icon'], '')
 
     def test_browserlayer(self):
