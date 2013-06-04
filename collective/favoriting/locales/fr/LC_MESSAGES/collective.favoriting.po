@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.favoriting\n"
-"POT-Creation-Date: 2010-11-10 11:05+0000\n"
+"POT-Creation-Date: 2013-06-04 15:13+0000\n"
 "PO-Revision-Date: 2010-11-13 11:07+0100\n"
 "Last-Translator: YOURNAME <name@email.com>\n"
 "Language-Team: French <plone-fr@lists.plone.org>\n"
@@ -16,3 +16,24 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.favoriting\n"
 "X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
+
+#: ./profiles/default/actions.xml
+msgid "Add to favorite"
+msgstr "Ajouter aux favoris"
+
+#: ./browser/favoriting_view.py:16
+msgid "Added to favorite"
+msgstr "Ajouté au favoris"
+
+#: ./profiles/default/actions.xml
+msgid "Remove from favorite"
+msgstr "Retirer des favoris"
+
+#: ./browser/favoriting_view.py:27
+msgid "Removed from favorite"
+msgstr "Retiré des favoris"
+
+#: ./browser/favoriting_view.pt:21
+msgid "delete"
+msgstr "supprimer"
+
